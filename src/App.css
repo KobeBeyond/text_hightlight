@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+html,
+body {
+  margin: 0;
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.editor {
+  color: #383a42;
+  background: #fafafa;
+  white-space: pre-wrap;
+  -webkit-user-modify: read-write-plaintext-only;
+  font-size: 20px;
+  padding: 1em 0.5em;
+  min-height: 300px;
+  outline-width: 4px;
+  outline-color: cornflowerblue;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::highlight(built_in) {
+  color: #c18401;
 }
-
-.App-link {
-  color: #61dafb;
+::highlight(comment) {
+  color: #a0a1a7;
+  font-style: italic;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::highlight(number),
+::highlight(selector-class) {
+  color: #986801;
+}
+::highlight(attr) {
+  color: #986801;
+  background-color: red;
+}
+::highlight(string) {
+  color: #50a14f;
+}
+::highlight(selector-pseudo) {
+  color: #986801;
+}
+::highlight(attribute) {
+  color: #50a14f;
+}
+::highlight(keyword) {
+  color: #a626a4;
 }
